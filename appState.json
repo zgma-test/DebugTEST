@@ -1,0 +1,132 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "6456f93e-9493-417b-a68f-1952023b2c1e": {
+        "id": "6456f93e-9493-417b-a68f-1952023b2c1e",
+        "parent": null,
+        "name": "DebugTEST",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "e1f1bf5a-e5cf-4a35-8812-cf5bfad132ff"
+        ],
+        "isRemovable": false,
+        "filePath": "DebugTEST"
+      },
+      "e1f1bf5a-e5cf-4a35-8812-cf5bfad132ff": {
+        "id": "e1f1bf5a-e5cf-4a35-8812-cf5bfad132ff",
+        "parent": "6456f93e-9493-417b-a68f-1952023b2c1e",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "DebugTEST/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    debugger;\n\n    console.log(event);\n    let name = 'Udith';\n\n    callback(null, {\"message\": name});\n}\n\nrequire('aws-lamda-debugger');",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [
+          {
+            "resourceName": "apigusEast1DebugLambdaAPIrunMepost",
+            "config": {}
+          }
+        ]
+      }
+    },
+    "rootNode": "6456f93e-9493-417b-a68f-1952023b2c1e",
+    "openFiles": [
+      "e1f1bf5a-e5cf-4a35-8812-cf5bfad132ff"
+    ],
+    "currentFileId": "e1f1bf5a-e5cf-4a35-8812-cf5bfad132ff",
+    "resources": {
+      "apigusEast1DebugLambdaAPIrunMepost": {
+        "name": "apigusEast1DebugLambdaAPIrunMepost",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 0,
+          "apiName": "DebugLambdaAPI",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "runMe",
+          "resourcePath": "/runMe",
+          "restMethod": "POST",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "test",
+          "mode": 0
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      },
+      {
+        "lambdaId": "e1f1bf5a-e5cf-4a35-8812-cf5bfad132ff",
+        "varKey": "DEBUGGER_BROKER_ADDRESS",
+        "varValue": "3.212.71.188",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      },
+      {
+        "lambdaId": "e1f1bf5a-e5cf-4a35-8812-cf5bfad132ff",
+        "varKey": "DEBUGGER_FUNCTION_ID",
+        "varValue": "MyFunction",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      },
+      {
+        "lambdaId": "e1f1bf5a-e5cf-4a35-8812-cf5bfad132ff",
+        "varKey": "DEBUGGER_ACTIVE",
+        "varValue": "true",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "aws-lambda-debugger": {
+          "name": "aws-lambda-debugger",
+          "version": "1.1.0",
+          "dev": false,
+          "language": "javascript"
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "DebugTEST",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1575353191896
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "DebugTEST",
+      "url": "https://github.com/zgma-test/DebugTEST"
+    }
+  }
+}

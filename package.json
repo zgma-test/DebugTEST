@@ -1,0 +1,8 @@
+{
+  "name": "DebugTEST",
+  "version": "1.0.0",
+  "dependencies": {
+    "aws-lambda-debugger": "1.1.0"
+  },
+  "devDependencies": {}
+}
